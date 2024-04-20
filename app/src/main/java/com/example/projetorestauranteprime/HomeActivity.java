@@ -1,6 +1,8 @@
 package com.example.projetorestauranteprime;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -53,5 +55,9 @@ public class HomeActivity extends AppCompatActivity {
         recyclerViewMesas.setLayoutManager(layoutManager2);
         recyclerViewMesas.setHasFixedSize(true);
         recyclerViewMesas.setAdapter(adapterMesas);
+    }
+
+    public void openMesas(View v){
+        startActivity(new Intent(this, MesaActivity.class));
     }
 }
