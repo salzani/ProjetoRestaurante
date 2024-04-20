@@ -11,8 +11,8 @@
         android:id="@+id/tableImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/background_mesa"
         android:contentDescription="@string/mesa_icon"
         android:scaleType="center"
@@ -24,29 +24,28 @@
         android:id="@+id/ordersImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
         android:background="#FFFFFF"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/home_icon"
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/homeImageButton"
         app:srcCompat="@drawable/pedidods" />
 
     <ImageButton
         android:id="@+id/homeImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="16dp"
         android:background="#FFFFFF"
         android:contentDescription="@string/pedidos_icon"
+        android:onClick="openHome"
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tableImageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/home" />
 
     <TextView
@@ -65,13 +64,18 @@
 
     <EditText
         android:id="@+id/searchEditText"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="36dp"
-        android:drawableStart="@drawable/baseline_search_24"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="16dp"
+        android:background="#F0F0F0"
+        android:drawableLeft="@drawable/search_fill0_wght400_grad0_opsz48"
+        android:drawablePadding="8dp"
         android:ems="10"
         android:hint="Procurar por mesas"
         android:inputType="text"
+        android:paddingLeft="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,25 +95,23 @@
         app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
 
     <ImageView
-        android:id="@+id/profileImageView"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="28dp"
+        android:id="@+id/imageView7"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/settingsImageButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
-        android:background="#FFFFFF"
-        android:contentDescription="@string/config_icon"
-        android:scaleType="center"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menu" />
+        app:srcCompat="@drawable/baseline_menu_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

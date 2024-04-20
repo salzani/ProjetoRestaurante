@@ -1,4 +1,4 @@
-package com.example.projetorestauranteprime;
+package com.example.projetorestauranteprime.mesaAdapter;
 
 public class Mesa {
 

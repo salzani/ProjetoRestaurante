@@ -2,7 +2,9 @@ package com.example.projetorestauranteprime;
 
 import static java.lang.Integer.parseInt;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +13,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.projetorestauranteprime.mesaAdapter.Mesa;
+import com.example.projetorestauranteprime.mesaAdapter.MesaAdapter;
 
 import java.util.ArrayList;
 
@@ -47,5 +52,9 @@ public class MesaActivity extends AppCompatActivity {
             mesas.add(new Mesa(parseInt(idMesas[i]), parseInt(peopleMesas[i]
             ), parseInt(ordersPlaced[i]), parseInt(readyOrders[i])));
         }
+    }
+
+    public void openHome(View v){
+        startActivity(new Intent(this, HomeActivity.class));
     }
 }
