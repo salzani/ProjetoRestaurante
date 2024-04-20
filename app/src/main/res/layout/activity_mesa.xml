@@ -8,7 +8,7 @@
     tools:context=".MesaActivity">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/tableImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="96dp"
@@ -21,11 +21,11 @@
         app:srcCompat="@drawable/table" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/ordersImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="108dp"
         android:layout_marginBottom="36dp"
         android:background="#FFFFFF"
         android:backgroundTint="#FFFFFF"
@@ -33,20 +33,20 @@
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintStart_toEndOf="@+id/homeImageButton"
         app:srcCompat="@drawable/pedidods" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/homeImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="28dp"
         android:layout_marginBottom="36dp"
         android:background="#FFFFFF"
         android:contentDescription="@string/pedidos_icon"
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintStart_toEndOf="@+id/tableImageButton"
         app:srcCompat="@drawable/home" />
 
     <TextView
@@ -64,7 +64,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/searchEditText"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
@@ -78,19 +78,20 @@
         app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tableRecyclerView"
         android:layout_width="405dp"
         android:layout_height="455dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toTopOf="@+id/tableImageButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/profileImageView"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginTop="28dp"
@@ -100,7 +101,7 @@
         app:srcCompat="@drawable/user" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/settingsImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
