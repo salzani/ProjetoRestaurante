@@ -3,6 +3,8 @@ package com.example.projetorestauranteprime;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +26,24 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public void login(View v) {
+
+    public void checkLogin(View v){
+        EditText usernameLogin = findViewById(R.id.userEditText);
+        EditText passwordLogin = findViewById(R.id.passwordEditText);
+
+        String getUsername = usernameLogin.getText().toString().toLowerCase();
+        String getPassword = passwordLogin.getText().toString();
+
+
+        if(getUsername.equals("adm") && getPassword.equals("12345")){
+            login();
+        }else{
+            Toast.makeText(this,"Login incorreto, favor entrar em contato com o suporte.", Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+    public void login() {
         Intent i = new Intent(this, HomeActivity.class);
         startActivity(i);
     }

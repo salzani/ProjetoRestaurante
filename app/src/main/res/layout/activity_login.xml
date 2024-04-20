@@ -51,7 +51,7 @@
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
-        android:onClick="login"
+        android:onClick="checkLogin"
         android:text="Vamos lá!"
         app:backgroundTint="#F7C846"
         app:layout_constraintEnd_toEndOf="parent"
